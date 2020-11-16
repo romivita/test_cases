@@ -1,0 +1,26 @@
+Edit customer’s landline phone number
+
+Concerns or questions:
+Ask what format they want for the phone number (if it is separated with hyphens), if it is necessary to enter the prefix or is it written by default (if + or 00 will be used)
+
+User Interface Tests
+Verify that the customer's phone can be added by entering a valid landline number
+Verify that the customer's phone can be left blank by removing the landline number
+Verify that the prefix of the landline number is mandatory
+Verify that landline validations will be done when submitting
+Verify that the landline number must be different from the mobile phone
+
+Service Tests
+Verify that the GET method returns the customer's landline number (by an ID)
+Verify that the GET method returns 404 if ID not found or invalid
+Verify that the PUT method updates the customer's landline number (by an ID)
+Verify that the PUT method returns 404 if ID not found or invalid
+Verify that the PUT method returns 405 if an identifier isn’t sent
+Verify that the POST method create the customer's landline number (by an ID)
+Verify that the POST method returns 404 if ID not found or invalid
+Verify that the POST method returns 405 if an identifier isn’t sent
+
+Unit Tests
+Validate that sending valid parameters to the phone update service returns OK
+Validate that sending invalid parameters to the phone update service returns an exception
+•	Invalid parameters: phone with letters, phone with symbols, phone with unicode chars, but phone with one number, phone with more than 11 numbers.
